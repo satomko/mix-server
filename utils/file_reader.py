@@ -29,3 +29,17 @@ def read_parquet_summary(filename: str) -> str:
     file_path = DATA_DIR / filename
     df = pd.read_parquet(file_path)
     return f"Parquet file '{filename}' has {len(df)} rows and {len(df.columns)} columns."
+
+def read_csv_column_names(filename: str) -> list[any]:
+    """
+    Reads the first line of a CSV file and returns the column names using pandas.
+    
+    Args:
+        filename: Name of the CSV file in the /data directory
+        
+    Returns:
+        List of column names from the CSV header
+    """
+    filepath = DATA_DIR / filename
+    df = pd.read_csv(filepath)
+    return df.columns.tolist()  
