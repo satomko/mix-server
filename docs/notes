@@ -1,0 +1,17 @@
+1. Using the Claude Desktop with the following claude_desktop_config.json.
+
+{
+  "mcpServers": {
+    "mix_server": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/ABSOLUTE/PATH/TO/mix_server",
+        "run",
+        "main.py"
+      ]
+    }
+  }
+}
+
+
